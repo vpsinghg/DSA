@@ -25,6 +25,19 @@
 */
 
 
+// Brute Force Approach
+int Solution::diffPossible(vector<int> &A, int B) {
+    int N= A.size();
+    for (int i = 0; i < N; i++) {
+    for (int j = i + 1; j < N; j++) {
+        if (A[j] - A[i] > B) break; // No need check forward because Array is sorted so the difference is going to increase even further because A[I] is going to increase or remain same.
+        if (A[j] - A[i] == B) return true; 
+    }
+    }
+    return false
+}
+
+// Efficient Approaches
 int Solution::diffPossible(vector<int> &A, int B) {
     int N = A.size();
     if(N<=1){
