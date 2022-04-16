@@ -24,6 +24,7 @@
 
 */
 
+
 int Solution::diffPossible(vector<int> &A, int B) {
     int N = A.size();
     if(N<=1){
@@ -52,3 +53,16 @@ int Solution::diffPossible(vector<int> &A, int B) {
 
 }
 
+int Solution::diffPossible(vector<int> &A, int B) {
+
+    int N = A.size();
+    int j = 0; 
+    for (int i = 0; i < N; i++) {
+        j = max(j, i+1);
+        while (j < N && (A[j] - A[i] < B)) {
+            j += 1;
+        }
+        if (A[j] - A[i] == B) return true;
+    }
+    return false;
+}
