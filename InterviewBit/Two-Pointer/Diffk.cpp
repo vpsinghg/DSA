@@ -24,6 +24,10 @@
 
 */
 
+/* Full Solution Blog 
+    HashNode - https://vikramsinghgurjar.hashnode.dev/diffk-interviewbit-two-pointer-approach
+    Dev - https://dev.to/vpsinghg/diffk-interviewbit-21jj
+*/
 
 // Brute Force Approach
 int Solution::diffPossible(vector<int> &A, int B) {
@@ -51,7 +55,8 @@ int Solution::diffPossible(vector<int> &A, int B) {
             if( right!=left){
                 return 1;
             }
-            else{
+            else
+            {
                 right++;
             }
         }
